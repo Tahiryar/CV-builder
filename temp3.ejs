@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Template 1</title>
+</head>
+<body>
+    <h1><%= name %></h1>
+    <p>Email: <%= email %></p>
+    <p>Contact: <%= contact %></p>
+    <p>Education: <%= education %></p>
+    <h2>Skills</h2>
+    <ul>
+        <% skills.forEach(skill => { %>
+            <li><%= skill %></li>
+        <% }) %>
+    </ul>
+    <h2>Experience</h2>
+    <% experience.forEach(exp => { %>
+        <p><strong><%= exp.position %></strong> at <%= exp.company %> (<%= exp.startDate %> - <%= exp.endDate %>)</p>
+        <p><%= exp.description %></p>
+    <% }) %>
+    <h2>Certifications</h2>
+    <ul>
+        <% certifications.forEach(cert => { %>
+            <li><%= cert %></li>
+        <% }) %>
+    </ul>
+    <h2>Projects</h2>
+    <% projects.forEach(proj => { %>
+        <p><strong><%= proj.title %></strong></p>
+        <p><%= proj.description %></p>
+    <% }) %>
+</body>
+</html>
